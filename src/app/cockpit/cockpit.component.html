@@ -1,6 +1,15 @@
 <div class="row">
   <div class="col-xs-12">
-    <p>Add new Servers or blueprints!</p>
+    <p [appBetterHighlight]="'orange'" defaultColor="yellow">
+      Add new Servers or blueprints!
+    </p>
+    <p *appUnless="show">I'm the author</p>
+    <div [ngSwitch]="age">
+      <p *ngSwitchCase="10">age is 10</p>
+      <p *ngSwitchCase="20">age is 20</p>
+      <p *ngSwitchCase="30">age is 30</p>
+      <p *ngSwitchDefault>age is 40</p>
+    </div>
     <label>Server Name</label>
     <!-- <input type="text" class="form-control" [(ngModel)]="newServerName" /> -->
     <input type="text" class="form-control" #serverNameInput />

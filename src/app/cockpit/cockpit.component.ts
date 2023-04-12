@@ -12,6 +12,8 @@ import {
   styleUrls: ['./cockpit.component.css'],
 })
 export class CockpitComponent {
+  show = false;
+  age = 30;
   @Output() serverCreated = new EventEmitter<{
     serverName: string;
     serverContent: string;
